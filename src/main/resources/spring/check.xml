@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/util
+                            http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <context:component-scan base-package="ch3.collections.annotated.check"/>
+
+    <bean id="str" class="java.lang.String" c:_0="str"/>
+    <bean id="str1" class="java.lang.String" c:_0="str1"/>
+    <bean id="str2" class="java.lang.String" c:_0="str2"/>
+
+    <util:list id="list" list-class="java.util.ArrayList"
+               value-type="java.lang.String">
+        <ref bean="str"/>
+        <ref bean="str2"/>
+    </util:list>
+</beans>
